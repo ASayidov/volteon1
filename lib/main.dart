@@ -28,10 +28,27 @@ class VolteScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            '1. Извлеките сим-карту\n2. Нажмите кнопку для активации VoLTE, и телефон перезагрузится. После включения телефона вставьте сим-карту.',
-            style: TextStyle(fontSize: 18),
+          RichText(
             textAlign: TextAlign.center,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: '1. Извлеките сим-карту!!!\n',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
+                  ),
+                ),
+                TextSpan(
+                  text: '2. Нажмите кнопку для активации VoLTE, и телефон перезагрузится. После включения телефона вставьте сим-карту.',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 20),
           ElevatedButton(
